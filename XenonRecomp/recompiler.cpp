@@ -2300,7 +2300,7 @@ bool Recompiler::Recompile(const RecompileArgs& args)
 
 bool Recompiler::Recompile(const Function& fn)
 {
-    auto base = fn.base;
+    uint32_t base = fn.base;
     auto end = base + fn.size;
     auto* data = (uint32_t*)image.Find(base);
 
